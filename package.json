@@ -1,7 +1,7 @@
 {
   "name": "tread",
   "version": "1.0.0",
-  "description": "Recursively walk through and update an object with the keys from another object. Objects can be infinitely nested. Perfect for PUT request handling in your REST API.",
+  "description": "Update an object with another object containing just the new key-value pairs. Objects can be infinitely nested. Perfect for updating with PUT requests in your REST API.",
   "author": "Jared Reich <jaredreich@gmail.com>",
   "main": "index.js",
   "scripts": {

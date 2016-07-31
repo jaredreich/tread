@@ -1,7 +1,3 @@
-# tread.js
-
-Update an object with another object containing just the new key-value pairs. Objects can be infinitely nested. Perfect for updating with PUT requests in your REST API.
-
 ## Installation
 
 npm:
