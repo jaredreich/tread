@@ -1,0 +1,26 @@
+{
+  "name": "tread",
+  "version": "1.0.0",
+  "description": "Recursively walk through and update an object with the keys from another object. Objects can be infinitely nested. Perfect for PUT request handling in your REST API.",
+  "author": "Jared Reich <jaredreich@gmail.com>",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "devDependencies": {
+    "tape": "*"
+  },
+  "keywords": [
+    "traverse",
+    "object",
+    "objects",
+    "update",
+    "nested"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaredreich/tread.git"
+  },
+  "author": "Jared Reich",
+  "license": "MIT"
+}
