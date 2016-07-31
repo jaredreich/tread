@@ -31,13 +31,13 @@ var user = {
 
 // userUpdates from your PUT request
 var userUpdates = {
-	details: {
-  	name: {
-    	first: 'John'
+  details: {
+    name: {
+      first: 'John'
     },
     address: {
-    	coordinates: {
-      	lat: 100
+      coordinates: {
+        lat: 100
       }
     }
   }
