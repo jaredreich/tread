@@ -2,7 +2,7 @@ var tread = require('./')
 var test = require('tape')
 
 test('tread', function (assert) {
-  assert.plan(2)
+  assert.plan(4)
   assert.deepEqual(tread({
     details: {
       name: {
@@ -56,6 +56,23 @@ test('tread', function (assert) {
   }, {
     name: 'John'
   }), {
+    name: 'John'
+  })
+  assert.deepEqual(tread({
+    name: 'Jane'
+  }, {
+    name: 'John',
+    age: 20
+  }, false), {
+    name: 'John',
+    age: 20
+  })
+  assert.deepEqual(tread({
+    name: 'Jane'
+  }, {
+    name: 'John',
+    age: 20
+  }, true), {
     name: 'John'
   })
 })

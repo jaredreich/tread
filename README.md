@@ -1,6 +1,5 @@
 ## Installation
 
-npm:
 ``` bash
 npm install --save tread
 ```
@@ -44,8 +43,24 @@ var userUpdates = {
 }
 
 // perform the update
-user = tread(user, userUpdates)
+user = tread(user, userUpdates, strict)
 
 // save the updated user in the database
 user.save(...)
+```
+
+#### Strict mode
+
+strict (Boolean, default = false): only updates object if the key already existed.
+For example:
+```javascript
+tread({ name: 'Jane' }, { name: 'John', age: 20 }, true)
+// outputs
+{ name: 'John' }
+
+tread({ name: 'Jane' }, { name: 'John', age: 20 }, false)
+// OR
+tread({ name: 'Jane' }, { name: 'John', age: 20 })
+// outputs
+{ name: 'John', age: 20 }
 ```

@@ -1,6 +1,6 @@
 {
   "name": "tread",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Update an object with another object containing just the new key-value pairs. Objects can be infinitely nested. Perfect for updating with PUT requests in your REST API.",
   "author": "Jared Reich <jaredreich@gmail.com>",
   "main": "index.js",
