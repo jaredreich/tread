@@ -1,19 +1,19 @@
-module.exports = tread
-
-function tread (objOld, objNew, strict) {
-  var obj = objOld
-  for (var key in objNew) {
+function tread (oldObject, newObject, strict) {
+  var obj = oldObject
+  for (var key in newObject) {
     if (typeof obj[key] === 'object') {
-      tread(obj[key], objNew[key])
+      tread(obj[key], newObject[key])
     } else {
       if (strict) {
         if (obj.hasOwnProperty(key)) {
-          obj[key] = objNew[key]
+          obj[key] = newObject[key]
         }
       } else {
-        obj[key] = objNew[key]
+        obj[key] = newObject[key]
       }
     }
   }
   return obj
 }
+
+module.exports = tread
