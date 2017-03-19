@@ -2,14 +2,11 @@
   "name": "tread",
   "version": "1.1.0",
   "description": "Update an object with another object containing just the new key-value pairs. Objects can be infinitely nested. Perfect for updating with PUT requests in your REST API.",
-  "author": "Jared Reich <jaredreich@gmail.com>",
-  "main": "index.js",
+  "author": "Jared Reich",
   "scripts": {
-    "test": "node test"
+    "test": "ava"
   },
-  "devDependencies": {
-    "tape": "*"
-  },
+  "main": "index.js",
   "keywords": [
     "traverse",
     "object",
@@ -21,6 +18,8 @@
     "type": "git",
     "url": "https://github.com/jaredreich/tread.git"
   },
-  "author": "Jared Reich",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "0.18.2"
+  }
 }

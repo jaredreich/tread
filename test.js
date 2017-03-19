@@ -1,9 +1,9 @@
-var tread = require('./')
-var test = require('tape')
+import test from 'ava'
 
-test('tread', function (assert) {
-  assert.plan(4)
-  assert.deepEqual(tread({
+import tread from './'
+
+test('tread', t => {
+  t.deepEqual(tread({
     details: {
       name: {
         first: 'Jane',
@@ -32,7 +32,8 @@ test('tread', function (assert) {
         }
       }
     }
-  }), {
+  }),
+  {
     details: {
       name: {
         first: 'John',
@@ -51,14 +52,17 @@ test('tread', function (assert) {
     },
     gender: 'm'
   })
-  assert.deepEqual(tread({
+
+  t.deepEqual(tread({
     name: 'Jane'
   }, {
     name: 'John'
-  }), {
+  }),
+  {
     name: 'John'
   })
-  assert.deepEqual(tread({
+
+  t.deepEqual(tread({
     name: 'Jane'
   }, {
     name: 'John',
@@ -67,7 +71,8 @@ test('tread', function (assert) {
     name: 'John',
     age: 20
   })
-  assert.deepEqual(tread({
+
+  t.deepEqual(tread({
     name: 'Jane'
   }, {
     name: 'John',

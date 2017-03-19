@@ -6,7 +6,6 @@ function tread (objOld, objNew, strict) {
     if (typeof obj[key] === 'object') {
       tread(obj[key], objNew[key])
     } else {
-      console.log(strict)
       if (strict) {
         if (obj.hasOwnProperty(key)) {
           obj[key] = objNew[key]
